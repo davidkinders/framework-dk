@@ -1,6 +1,6 @@
 <?php
 namespace Helpers\AdminLTE;
-use Helpers\DkRbac;
+use Core\Rbac;
 
 /*
  * Box
@@ -41,7 +41,7 @@ class Box extends AdminLTE {
                       <div class="box-tools pull-right">';
         if (is_array($this->tools)) {
             foreach ($this->tools as $tool) {
-                if (DkRbac::canUser($tool['rbac']) OR $tool['rbac'] == null) {
+                if (Rbac::canUser($tool['rbac']) OR $tool['rbac'] == null) {
                     $html .= $tool['tool'];
                 }
             }

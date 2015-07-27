@@ -61,8 +61,15 @@ use Core\Router;
 use Helpers\Hooks;
 
 //define routes
-Router::any('', 'Controllers\Welcome@index');
-Router::any('subpage', 'Controllers\Welcome@subPage');
+Router::any('', 'Controllers\WelcomeController@index');
+Router::any('subpage', 'Controllers\WelcomeController@subPage');
+
+// Samples
+Router::any('samples', 'Controllers\SamplesController@index');
+
+
+
+
 
 //module routes
 $hooks = Hooks::get();

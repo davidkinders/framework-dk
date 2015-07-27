@@ -1,22 +1,12 @@
-<div class="container content">
-	<div class="row">
-		<div class="col-md-12">
-
-			<h1>404</h1>
-
-			<?php echo $data['error'];?>
-
-			<hr />
-
-			<h3>The page you were looking for could not be found</h3>
-			<p>This could be the result of the page being removed, the name being changed or the page being temporarily unavailable</p>
-			<h3>Troubleshooting</h3>
-
-			<ul>
-			  <li>If you spelled the URL manually, double check the spelling</li>
-			  <li>Go to our website's home page, and navigate to the content in question</li>
-			</ul>
-
-		</div>
-	</div>
-</div>
+<section class="content">
+  <div class="error-page">
+    <h2 class="headline text-yellow"> 404</h2>
+    <div class="error-content">
+      <h3><i class="fa fa-warning text-yellow"></i> Oops! <?=$data['error']?>.</h3>
+      <p>
+        We could not find the page you were looking for.
+        Meanwhile, you may <a href="/">return to startpage.</a>
+      </p>
+    </div>
+  </div>
+</section>

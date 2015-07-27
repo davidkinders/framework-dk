@@ -1,27 +1,15 @@
 <?php
 namespace Core;
-
 use Helpers\Session;
 
-/*
- * config - an example for setting up system settings
- * When you are done editing, rename this file to 'config.php'
- *
- * @author David Carr - dave@simplemvcframework.com
- * @author Edwin Hoksberg - info@edwinhoksberg.nl
- * @version 2.2
- * @date June 27, 2014
- * @date updated May 18 2015
- */
 class Config
 {
     public function __construct()
     {
         //turn on output buffering
         ob_start();
-
-        //site address
-        define('DIR', 'http://domain.com');
+        //site address with ending slash /
+        define('DIR', 'http://framework-dk/');
 
         //set default controller and method for legacy calls
         define('DEFAULT_CONTROLLER', 'welcome');
@@ -30,22 +18,19 @@ class Config
         //set the default template
         define('TEMPLATE', 'default');
 
-        //set a default language
-        define('LANGUAGE_CODE', 'en');
-
         //database details ONLY NEEDED IF USING A DATABASE
         define('DB_TYPE', 'mysql');
         define('DB_HOST', 'localhost');
-        define('DB_NAME', 'dbname');
+        define('DB_NAME', 'framework-dk');
         define('DB_USER', 'root');
-        define('DB_PASS', 'password');
-        define('PREFIX', 'smvc_');
+        define('DB_PASS', '');
+        define('PREFIX', '');
 
         //set prefix for sessions
-        define('SESSION_PREFIX', 'smvc_');
+        define('SESSION_PREFIX', 'fw_');
 
         //optionall create a constant for the name of the site
-        define('SITETITLE', 'V2.2');
+        define('SITETITLE', 'V2.2-dk');
 
         //optionall set a site email address
         //define('SITEEMAIL', '');
@@ -55,7 +40,7 @@ class Config
         set_error_handler('Core\Logger::ErrorHandler');
 
         //set timezone
-        date_default_timezone_set('Europe/London');
+        date_default_timezone_set('Europe/Brussels');
 
         //start sessions
         Session::init();

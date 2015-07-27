@@ -12,7 +12,7 @@ use Core\Rbac;
  * @date June 27, 2014
  * @date updated May 18 2015
  */
-class Welcome extends Controller
+class SamplesController extends Controller
 {
 
     /**
@@ -32,20 +32,8 @@ class Welcome extends Controller
         $data['welcome_message'] = "The framework dashboard";
 
         View::renderTemplate('header', $data);
-        View::render('welcome/welcome', $data);
+        View::render('samples/index', $data);
         View::renderTemplate('footer', $data);
     }
 
-    /**
-     * Define Subpage page title and load template files
-     */
-    public function subPage()
-    {
-        $data['title'] = "Welcome";
-        $data['welcome_message'] = "Subpage";
-
-        View::renderTemplate('header', $data);
-        View::render('welcome/subpage', $data);
-        View::renderTemplate('footer', $data);
-    }
 }
