@@ -1,6 +1,6 @@
 <?php
 
-namespace Helpers;
+namespace Core;
 
 use Helpers\Password;
 use Helpers\Session;
@@ -8,7 +8,7 @@ use Helpers\Session;
 /**
  * David K. version 20150724
  * * */
-class DkRbac {
+class Rbac {
 
     /**
      *

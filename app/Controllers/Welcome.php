@@ -3,7 +3,7 @@ namespace Controllers;
 
 use Core\View;
 use Core\Controller;
-
+use Core\Rbac;
 /*
  * Welcome controller
  *
@@ -21,7 +21,6 @@ class Welcome extends Controller
     public function __construct()
     {
         parent::__construct();
-        $this->language->load('Welcome');
     }
 
     /**
@@ -29,8 +28,8 @@ class Welcome extends Controller
      */
     public function index()
     {
-        $data['title'] = $this->language->get('welcome_text');
-        $data['welcome_message'] = $this->language->get('welcome_message');
+        $data['title'] = "Welcome";
+        $data['welcome_message'] = "The framework dashboard";
 
         View::renderTemplate('header', $data);
         View::render('welcome/welcome', $data);
@@ -42,8 +41,8 @@ class Welcome extends Controller
      */
     public function subPage()
     {
-        $data['title'] = $this->language->get('subpage_text');
-        $data['welcome_message'] = $this->language->get('subpage_message');
+        $data['title'] = "Welcome";
+        $data['welcome_message'] = "Subpage";
 
         View::renderTemplate('header', $data);
         View::render('welcome/subpage', $data);
