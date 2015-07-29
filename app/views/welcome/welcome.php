@@ -7,3 +7,9 @@
 <a class="btn btn-md btn-success" href="<?php echo DIR;?>subpage">
 	Subpage
 </a>
+
+<?php
+    echo "<pre>";
+    print_r($data["dev"]);
+    echo "</pre>";
+?>

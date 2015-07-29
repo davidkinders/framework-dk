@@ -1,5 +1,6 @@
 <?php
-use Helpers\AdminLTE\Config;
+use Core\Rbac;
+use Helpers\AdminLTE\Sitebar;
 ?>
 
 <div class="main-sidebar">
@@ -14,19 +15,40 @@ use Helpers\AdminLTE\Config;
         </span>
       </div>
     </form><!-- /.sidebar-form -->
-
-    <!-- Sidebar Menu -->
     <ul class="sidebar-menu">
-      <li class="header">HEADER</li>
-      <li class="active"><a href="#"><i class="fa fa-circle-o"></i><span>Link</span></a><</li>
-      <li><a href="#"><span>Another Link</span></a></li>
-      <li class="treeview">
-        <a href="#"><span>Multilevel</span> <i class="fa fa-angle-left pull-right"></i></a>
-        <ul class="treeview-menu">
-          <li><a href="#">Link in level 2</a></li>
-          <li><a href="#">Link in level 2</a></li>
-        </ul>
-      </li>
+<?php
+$menuItems = Sitebar::getMenuItems();
+    foreach ($menuItems as $menuItem){
+
+    if ($menuItem['items'] == null)
+    {
+        if ($_SERVER['REQUEST_URI'] == $menuItem['link']) {$active = "active";}else{$active = "";};
+        echo "<li class=\"$active\"><a href=\"$menuItem[link]\"><i class=\"fa $menuItem[icon]\"></i><span>$menuItem[caption]</span></a></li>";    
+    }
+    else
+    {
+        if ($_SERVER['REQUEST_URI'] == $menuItem['link']) {$active = "active";}else{$active = "";};
+        echo "<li class=\"$active\" class=\"treeview\">";
+        echo "<a href=\"#\"><i class=\"fa $menuItem[icon]\"></i><span>Multilevel</span> <i class=\"fa fa-angle-left pull-right\"></i></a>";
+        echo "<ul class=\"treeview-menu\">";
+        subItems($menuItem['items']);
+        echo "</ul>";
+        echo "</li>";
+    }     
+}
+
+function subItems($menuSubItems)
+{
+    foreach ($menuSubItems as $menuSubItem)
+    {
+        if ($_SERVER['REQUEST_URI'] == $menuSubItem['link']) {$active = "active";}else{$active = "";};
+        echo "<li class=\"$active\"><a href=\"$menuSubItem[link]\"><i class=\"fa $menuSubItem[icon]\"></i><span>$menuSubItem[caption]</span></a></li>";    
+    }
+}       //class=\"active\"
+
+
+?>
     </ul>
   </div>
 </div>
+

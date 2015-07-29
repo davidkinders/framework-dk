@@ -1,1 +1,48 @@
+<p>Error on Jul 29, 2015 6:52AM - require(app/templates/default/.php): failed to open stream: No such file or directory in /home/david/framework-dk/app/Core/View.php on line 66</p><h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Jul 27, 2015 12:31PM</p>
+
+           <p><strong>Message:</strong> SQLSTATE[42S22]: Column not found: 1054 Unknown column '$id' in 'where clause'</p>
+
+           <p><strong>Code:</strong> 42</p>
+
+           <p><strong>File:</strong> /home/david/framework-dk/app/Helpers/Database.php</p>
+
+           <p><strong>Line:</strong> 100</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 /home/david/framework-dk/app/Helpers/Database.php(100): PDOStatement->execute()
+#1 /home/david/framework-dk/app/Helpers/AdminLTE/Sitebar.php(35): Helpers\Database->select('SELECT * FROM m...')
+#2 /home/david/framework-dk/app/Helpers/AdminLTE/Sitebar.php(44): Helpers\AdminLTE\Sitebar::getMenuItems('6')
+#3 /home/david/framework-dk/app/Controllers/WelcomeController.php(35): Helpers\AdminLTE\Sitebar::getMenuItems()
+#4 /home/david/framework-dk/app/Core/Router.php(92): Controllers\WelcomeController->index()
+#5 /home/david/framework-dk/app/Core/Router.php(182): Core\Router::invokeObject('Controllers\\Wel...')
+#6 /home/david/framework-dk/index.php(85): Core\Router::dispatch()
+#7 {main}</pre>
+
+           <hr />
+<h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Jul 27, 2015 12:30PM</p>
+
+           <p><strong>Message:</strong> SQLSTATE[42S22]: Column not found: 1054 Unknown column '$id' in 'where clause'</p>
+
+           <p><strong>Code:</strong> 42</p>
+
+           <p><strong>File:</strong> /home/david/framework-dk/app/Helpers/Database.php</p>
+
+           <p><strong>Line:</strong> 100</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 /home/david/framework-dk/app/Helpers/Database.php(100): PDOStatement->execute()
+#1 /home/david/framework-dk/app/Helpers/AdminLTE/Sitebar.php(35): Helpers\Database->select('SELECT * FROM m...')
+#2 /home/david/framework-dk/app/Controllers/WelcomeController.php(35): Helpers\AdminLTE\Sitebar::getMenuItems()
+#3 /home/david/framework-dk/app/Core/Router.php(92): Controllers\WelcomeController->index()
+#4 /home/david/framework-dk/app/Core/Router.php(182): Core\Router::invokeObject('Controllers\\Wel...')
+#5 /home/david/framework-dk/index.php(85): Core\Router::dispatch()
+#6 {main}</pre>
+
+           <hr />
 <p>Error on Jul 27, 2015 9:56AM - require(app/templates/TEMPLATE/header.php): failed to open stream: No such file or directory in /home/david/framework-dk/app/Core/View.php on line 66</p>

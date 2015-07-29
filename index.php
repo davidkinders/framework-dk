@@ -1,4 +1,5 @@
 <?php
+
 if (file_exists('vendor/autoload.php')) {
     require 'vendor/autoload.php';
 } else {
@@ -13,9 +14,9 @@ if (!is_readable('app/Core/Config.php')) {
 }
 
 /*
- *---------------------------------------------------------------
+ * ---------------------------------------------------------------
  * APPLICATION ENVIRONMENT
- *---------------------------------------------------------------
+ * ---------------------------------------------------------------
  *
  * You can load different configurations depending on your
  * current environment. Setting the environment also influences
@@ -29,11 +30,11 @@ if (!is_readable('app/Core/Config.php')) {
  * NOTE: If you change these, also change the error_reporting() code below
  *
  */
-    define('ENVIRONMENT', 'development');
+define('ENVIRONMENT', 'development');
 /*
- *---------------------------------------------------------------
+ * ---------------------------------------------------------------
  * ERROR REPORTING
- *---------------------------------------------------------------
+ * ---------------------------------------------------------------
  *
  * Different environments will require different levels of error reporting.
  * By default development will show errors but production will hide them.
@@ -50,7 +51,6 @@ if (defined('ENVIRONMENT')) {
         default:
             exit('The application environment is not set correctly.');
     }
-
 }
 
 //initiate config
@@ -59,17 +59,32 @@ new Core\Config();
 //create alias for Router
 use Core\Router;
 use Helpers\Hooks;
+use Core\Rbac;
+use Helpers\Url;
 
-//define routes
-Router::any('', 'Controllers\WelcomeController@index');
-Router::any('subpage', 'Controllers\WelcomeController@subPage');
+
+//Rbac::setPassword("david", "Seatboy!1");
+//Rbac::login("david", "Seatboy!1");
+
+
+
+if (Rbac::isGuest()) {
+
+    $freePages = ['/login', '/profile/forgot', '/profile/login'];
+    if (!in_array($_SERVER['REQUEST_URI'], $freePages)) {
+        Url::redirect("login");
+    }
+    // Profile
+    Router::any('login', 'Controllers\ProfileController@login');
+    
+} else {
+
+    Router::any('', 'Controllers\WelcomeController@index');
+    Router::any('subpage', 'Controllers\WelcomeController@subPage');
 
 // Samples
-Router::any('samples', 'Controllers\SamplesController@index');
-
-
-
-
+    Router::any('samples', 'Controllers\SamplesController@index');    
+}
 
 //module routes
 $hooks = Hooks::get();

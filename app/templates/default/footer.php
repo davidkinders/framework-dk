@@ -9,9 +9,9 @@ use Helpers\AdminLTE\Assets;
 
       <footer class="main-footer">
         <div class="pull-right hidden-xs">
-          <b>Version</b> 2.2.0
+          <b>Version</b> <?=VERSION?>
         </div>
-        <strong>Copyright &copy; 2014-2015 <a href="http://almsaeedstudio.com">Almsaeed Studio</a>.</strong> All rights reserved.
+        <strong>Copyright &copy; <?=COPYRIGHTYEAR?> <?=COPYRIGHT?>.</strong> All rights reserved.
       </footer>
       <!-- Add the sidebar's background. This div must be placed
            immediately after the control sidebar -->
@@ -21,7 +21,6 @@ use Helpers\AdminLTE\Assets;
 <?php
 echo Assets::renderFooter("js");
 echo Assets::renderFooterScript();
-
 ?>
   </body>
 </html>

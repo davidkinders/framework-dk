@@ -4,6 +4,7 @@ namespace Controllers;
 use Core\View;
 use Core\Controller;
 use Core\Rbac;
+use Helpers\AdminLTE\Sitebar;
 /*
  * Welcome controller
  *
@@ -31,6 +32,8 @@ class WelcomeController extends Controller
         $data['title'] = "Welcome";
         $data['welcome_message'] = "The framework dashboard";
 
+        $data["dev"] = Sitebar::getMenuItems();
+        
         View::renderTemplate('header', $data);
         View::render('welcome/welcome', $data);
         View::renderTemplate('footer', $data);
