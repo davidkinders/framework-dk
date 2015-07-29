@@ -57,12 +57,9 @@ new Core\Config();
 
 //create alias for Router
 use Core\Router;
-use Helpers\Hooks;
 use Core\Rbac;
+use Helpers\Hooks;
 use Helpers\Url;
-
-//Rbac::setPassword("david", "Seatboy!1");
-//Rbac::login("david", "Seatboy!1d");
 
 if (Rbac::isGuest()) {
 

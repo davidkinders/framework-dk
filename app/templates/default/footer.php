@@ -22,7 +22,12 @@ use Helpers\AdminLTE\Assets;
 echo Assets::renderFooter("js");
 echo Assets::renderFooterScript();
 
+if (isset(Assets::$error))
+{
+    echo "<script>bootbox.alert(\"Hello world!\"); </script>";
+}
+
 ?>
-<script>BootstrapDialog.alert('<?="qsd"?>');</script>
+
         </body>
 </html>

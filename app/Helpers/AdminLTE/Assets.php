@@ -17,6 +17,17 @@ class Assets extends AdminLTE {
     private static $FooterCss = [];
     private static $FooterJs = [];
     private static $FooterScript = [];
+    private static $error = null;
+
+    public static function setError($message) {
+        self::$error = $message;
+    }
+
+    public static function getError() {
+        if (self::$error == null) {
+        return "";    
+        }
+    }
 
     public static function addFooterScript($script) {
         self::$FooterScript[] = $script;
