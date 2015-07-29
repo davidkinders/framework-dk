@@ -12,6 +12,7 @@ use Helpers\AdminLTE\Assets;
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <?php
     Assets::addToHeader("css", Url::templatePath() . 'bootstrap/css/bootstrap.min.css');
+    Assets::addToHeader("css", Url::templatePath() . 'plugins/bootstrap-dialog/css/bootstrap-dialog.min.css');       
     Assets::addToHeader("css", Url::templatePath() . 'plugins/font-awesome/css/font-awesome.min.css');
     Assets::addToHeader("css", Url::templatePath() . 'plugins/ionicons/css/ionicons.min.css');
     Assets::addToHeader("css", Url::templatePath() . 'dist/css/AdminLTE.min.css');   
@@ -21,7 +22,8 @@ use Helpers\AdminLTE\Assets;
     
     Assets::addToFooter("js", Url::templatePath() . 'plugins/jQuery/jQuery-2.1.4.min.js');   
     Assets::addToFooter("js", Url::templatePath() . 'plugins/jquery-ui/jquery-ui.min.js');   
-    Assets::addToFooter("js", Url::templatePath() . 'bootstrap/js/bootstrap.min.js');   
+    Assets::addToFooter("js", Url::templatePath() . 'bootstrap/js/bootstrap.min.js');
+    Assets::addToFooter("js", Url::templatePath() . 'plugins/bootstrap-dialog/js/bootstrap-dialog.min.js');     
     Assets::addToFooter("js", Url::templatePath() . 'plugins/slimScroll/jquery.slimscroll.min.js');   
     Assets::addToFooter("js", Url::templatePath() . 'plugins/fastclick/fastclick.min.js');   
     Assets::addToFooter("js", Url::templatePath() . 'dist/js/app.min.js');   

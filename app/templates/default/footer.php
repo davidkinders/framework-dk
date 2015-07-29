@@ -21,6 +21,8 @@ use Helpers\AdminLTE\Assets;
 <?php
 echo Assets::renderFooter("js");
 echo Assets::renderFooterScript();
+
 ?>
-  </body>
+<script>BootstrapDialog.alert('<?="qsd"?>');</script>
+        </body>
 </html>

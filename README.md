@@ -1,6 +1,6 @@
 Currently in development
 
-This framework is based on the Simple MVC frame work from David Carr and the AdminLTE Theme.
+This framework is based on the Simple MVC framework from David Carr and the AdminLTE Theme.
 Build in RBAC system.
 
 

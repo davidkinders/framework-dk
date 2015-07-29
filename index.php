@@ -1,5 +1,4 @@
 <?php
-
 if (file_exists('vendor/autoload.php')) {
     require 'vendor/autoload.php';
 } else {
@@ -62,11 +61,8 @@ use Helpers\Hooks;
 use Core\Rbac;
 use Helpers\Url;
 
-
 //Rbac::setPassword("david", "Seatboy!1");
-//Rbac::login("david", "Seatboy!1");
-
-
+//Rbac::login("david", "Seatboy!1d");
 
 if (Rbac::isGuest()) {
 
@@ -80,10 +76,16 @@ if (Rbac::isGuest()) {
 } else {
 
     Router::any('', 'Controllers\WelcomeController@index');
+    
     Router::any('subpage', 'Controllers\WelcomeController@subPage');
 
 // Samples
-    Router::any('samples', 'Controllers\SamplesController@index');    
+    Router::any('samples', 'Controllers\SamplesController@index');
+    
+    
+// profile
+   Router::any('logoff', 'Controllers\ProfileController@logoff'); 
+    
 }
 
 //module routes
