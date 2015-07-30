@@ -8,11 +8,9 @@ $table->addColumn("username", "Username");
 $table->addColumn("surname", "Surname");
 $table->addColumn("givenname", "Givenname");
 $table->addColumn("email", "Email");
-$table->addLink("/admin/users/detail/%parm%", "id", "detail", "fa fa-align-justify", "green", "(per)user-management");
-$table->addLink("/admin/users/edit/%parm%", "id", "bewerk", "fa fa-pencil", "blue", "(per)user-management");
-
+$table->addLink("/admin/users/detail/%parm%", "id", "detail", "fa fa-align-justify", "green", "(rol)admin");
+$table->addLink("/admin/users/edit/%parm%", "id", "bewerk", "fa fa-pencil", "blue", "(rol)admin");
 $table->dataTable(true);
-
 
 $box = new Box();
 $box->title = "All users";
