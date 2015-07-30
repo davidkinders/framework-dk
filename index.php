@@ -1,4 +1,5 @@
 <?php
+
 if (file_exists('vendor/autoload.php')) {
     require 'vendor/autoload.php';
 } else {
@@ -60,6 +61,9 @@ use Core\Router;
 use Core\Rbac;
 use Helpers\Hooks;
 use Helpers\Url;
+use Helpers\AdminLTE\Assets;
+
+Assets::addBreadcrumb(["caption" => "Home", "link" => "/", "icon" => "fa fa-dashboard"]);
 
 if (Rbac::isGuest()) {
 
@@ -69,20 +73,19 @@ if (Rbac::isGuest()) {
     }
     // Profile
     Router::any('login', 'Controllers\ProfileController@login');
-    
 } else {
 
     Router::any('', 'Controllers\WelcomeController@index');
-    
+
     Router::any('subpage', 'Controllers\WelcomeController@subPage');
 
 // Samples
     Router::any('samples', 'Controllers\SamplesController@index');
-    
-    
+
+
 // profile
-   Router::any('logoff', 'Controllers\ProfileController@logoff'); 
-    
+    Router::any('logoff', 'Controllers\ProfileController@logoff');
+    Router::any('profile', 'Controllers\ProfileController@profile');
 }
 
 //module routes

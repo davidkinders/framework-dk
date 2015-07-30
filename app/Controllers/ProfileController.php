@@ -48,4 +48,13 @@ class ProfileController extends Controller {
         Url::redirect("/login");
     }
 
+    public function profile() {
+        $data['title'] = "My Settings";
+        
+        View::renderTemplate('header', $data);
+        View::render('profile/settings', $data);
+        View::renderTemplate('footer', $data);           
+           
+    }    
+    
 }

@@ -1,0 +1,12 @@
+Profile
+- forgot module to reset password.
+- Change own password.
+
+AdminLTE
+- Breadcrumb
+- Table Class
+- Menu editor
+
+Usermanagement
+- Module role
+

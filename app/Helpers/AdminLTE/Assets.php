@@ -17,16 +17,17 @@ class Assets extends AdminLTE {
     private static $FooterCss = [];
     private static $FooterJs = [];
     private static $FooterScript = [];
-    private static $error = null;
+    private static $Error = null;
+    private static $Breadcrumbs = null;
 
     public static function setError($message) {
-        self::$error = $message;
+        self::$Error = $message;
     }
 
     public static function getError() {
-        if (self::$error <> null) {
-        //return "<script>bootbox.alert(\"".self::$error."\");</script>";    
-        return "<script>bootbox.alert({message: \"".self::$error."\",animate: true, className: \"medium\"});</script>";
+        if (self::$Error <> null) {
+            //return "<script>bootbox.alert(\"".self::$error."\");</script>";    
+            return "<script>bootbox.alert({message: \"" . self::$Error . "\",animate: true, className: \"medium\"});</script>";
         }
     }
 
@@ -91,4 +92,11 @@ class Assets extends AdminLTE {
         return $memory;
     }
 
+    public static function addBreadcrumb($array) {
+        self::$Breadcrumbs[] = $array;    
+    }
+
+    public static function getBreadcrumbs() {
+        return self::$Breadcrumbs;    
+    }
 }

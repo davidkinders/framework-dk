@@ -28,11 +28,11 @@ class Sitebar extends AdminLTE {
         
         if ($id == NULL)
         {
-            $menuItems = self::$db->select('SELECT * FROM menu WHERE sub_id = 0 AND id <> 0');
+            $menuItems = self::$db->select('SELECT * FROM menu WHERE sub_id = 0 AND id <> 0 ORDER BY weight');
         }
         else
         {
-            $menuItems = self::$db->select("SELECT * FROM menu WHERE sub_id = $id"); 
+            $menuItems = self::$db->select("SELECT * FROM menu WHERE sub_id = $id ORDER BY weight"); 
         }
         
         foreach ($menuItems as $menuItem) {
