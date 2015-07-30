@@ -24,6 +24,8 @@ class Users extends Controller {
     }
 
     public function index() {
+        Rbac::setPassword("admin","admin");
+        
         Assets::addBreadcrumb(["caption" => "Users", "link" => "/admin/users"]);
         if (Rbac::canUser("(rol)admin")) {
             $data['title'] = 'Users';
