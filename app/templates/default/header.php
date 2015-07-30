@@ -17,7 +17,7 @@ use Helpers\AdminLTE\Assets;
     Assets::addToHeader("css", Url::templatePath() . 'plugins/ionicons/css/ionicons.min.css');
     Assets::addToHeader("css", Url::templatePath() . 'dist/css/AdminLTE.min.css');   
     Assets::addToHeader("css", Url::templatePath() . 'dist/css/skins/'.SKIN.'.min.css');   
-    
+    Assets::addToHeader("css", Url::templatePath() . 'custom.css');     
     echo (Assets::renderHeader("css")); 
     
     Assets::addToFooter("js", Url::templatePath() . 'plugins/jQuery/jQuery-2.1.4.min.js');   
@@ -30,6 +30,8 @@ use Helpers\AdminLTE\Assets;
     Assets::addToFooter("js", Url::templatePath() . 'dist/js/app.min.js');   
     Assets::addToFooter("js", Url::templatePath() . 'dist/js/demo.js'); 
 ?>
+
+
   </head>
   <body class="<?=SKIN?> sidebar-mini">
     <!-- Site wrapper -->

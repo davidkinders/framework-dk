@@ -7,6 +7,7 @@ use Core\Controller;
 use Core\Rbac;
 use Helpers\Url;
 use Helpers\Session;
+use Helpers\AdminLTE\Assets;
 
 class ProfileController extends Controller {
 
@@ -22,10 +23,17 @@ class ProfileController extends Controller {
             $username = trim(strtolower($_POST['username']));
             $password = trim($_POST['password']);
 
-            if (Rbac::login($username, $password) <> false) {
-                $error[] = "username or password incorrect!";
+            if (Rbac::login($username, $password) == false) {
+                Assets::setError("username or password incorrect!");
             } else {
-                Url::redirect("/");
+                // cookie zetten
+                if (!isset($_POST["rememberme"])) {
+                    setcookie("username", "");
+                } else {
+                    setcookie("username", $username);
+                }
+
+                Url::redirect("");
             }
         }
 
@@ -37,7 +45,7 @@ class ProfileController extends Controller {
 
     public function logoff() {
         Session::destroy();
-        Url::redirect("/");
+        Url::redirect("/login");
     }
 
 }

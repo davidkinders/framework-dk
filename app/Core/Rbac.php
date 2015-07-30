@@ -133,7 +133,7 @@ class Rbac {
 
         if (Password::verify($password, $dbPassword[0]->password)) {
             // user OK
-            $userDb = self::$db->select("SELECT username, surname, givenname, email FROM rbac_users WHERE username = '" . strtolower($username) . "'");
+            $userDb = self::$db->select("SELECT username, surname, givenname, email, avatar, title FROM rbac_users WHERE username = '" . strtolower($username) . "'");
             $user = $userDb[0];
 
             if ($session == true) {
@@ -142,6 +142,8 @@ class Rbac {
                 Session::set("surname", $user->surname);
                 Session::set("givenname", $user->givenname);
                 Session::set("email", $user->email);
+                Session::set("title", $user->title);
+                Session::set("avatar", $user->avatar);
                 return $user;
             } else {
                 return $user;

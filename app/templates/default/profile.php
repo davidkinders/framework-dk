@@ -3,41 +3,30 @@ use Helpers\Url;
 use Helpers\Hooks;
 use Helpers\AdminLTE\AdminLTE;
 use Helpers\AdminLTE\Assets;
+use Helpers\Session;
 ?>
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <img src="<?=Url::templatePath()?>dist/img/user2-160x160.jpg" class="user-image" alt="User Image" />
-                  <span class="hidden-xs">Alexander Pierce</span>
+                  <img src="/media/profiles/<?=Session::get("avatar");?>" class="user-image" alt="User Image" />
+                  <span class="hidden-xs"><?=Session::get("givenname");?> <?=Session::get("surname");?></span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
-                    <img src="<?=Url::templatePath()?>dist/img/user2-160x160.jpg" class="img-circle" alt="User Image" />
+                    <img src="/media/profiles/<?=Session::get("avatar");?>" class="img-circle" alt="User Image" />
                     <p>
-                      Alexander Pierce - Web Developer
-                      <small>Member since Nov. 2012</small>
+                       <?=Session::get("givenname");?> <?=Session::get("surname");?> - <?=Session::get("title");?> 
                     </p>
                   </li>
                   <!-- Menu Body -->
-                  <li class="user-body">
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Followers</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Sales</a>
-                    </div>
-                    <div class="col-xs-4 text-center">
-                      <a href="#">Friends</a>
-                    </div>
-                  </li>
                   <!-- Menu Footer-->
                   <li class="user-footer">
                     <div class="pull-left">
                       <a href="#" class="btn btn-default btn-flat">Profile</a>
                     </div>
                     <div class="pull-right">
-                      <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                      <a href="/logoff" class="btn btn-default btn-flat">Sign out</a>
                     </div>
                   </li>
                 </ul>

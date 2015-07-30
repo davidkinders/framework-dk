@@ -24,8 +24,9 @@ class Assets extends AdminLTE {
     }
 
     public static function getError() {
-        if (self::$error == null) {
-        return "";    
+        if (self::$error <> null) {
+        //return "<script>bootbox.alert(\"".self::$error."\");</script>";    
+        return "<script>bootbox.alert({message: \"".self::$error."\",animate: true, className: \"medium\"});</script>";
         }
     }
 

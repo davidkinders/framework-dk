@@ -11,5 +11,6 @@
 <?php
     echo "<pre>";
     print_r($data["dev"]);
+    print_r($_SESSION);
     echo "</pre>";
 ?>
