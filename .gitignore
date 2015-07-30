@@ -1,3 +1,4 @@
 app/Core/Config.php
-.DS_Store
-/nbproject/
+errorlog.html
+nbproject/*
+TODO.TXT
