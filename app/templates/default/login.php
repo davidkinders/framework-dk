@@ -11,6 +11,7 @@ use Helpers\AdminLTE\Assets;
     <meta charset="UTF-8">
     <title><?=$data['title']?></title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <meta http-equiv="X-UA-Compatible" content="IE=11">
 <?php
     Assets::addToHeader("css", Url::templatePath() . 'bootstrap/css/bootstrap.min.css');
     Assets::addToHeader("css", Url::templatePath() . 'plugins/font-awesome/css/font-awesome.min.css');
@@ -40,7 +41,7 @@ use Helpers\AdminLTE\Assets;
           </div>
           <div class="form-group has-feedback">
             <input type="password" class="form-control" name="password" placeholder="Password" />
-            <span class="form-control-feedback"></span>
+            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
           </div>
           <div class="row">
             <div class="col-xs-8">
