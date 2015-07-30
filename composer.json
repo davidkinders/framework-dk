@@ -1,14 +1,14 @@
 {
-    "name": "simple-mvc-framework/framework",
+    "name": "davidkinders/framework-dk",
     "type": "project",
-    "description": "Framework for PHP 5.4+",
-    "homepage": "https://github.com/simple-mvc-framework/framework",
+    "description": "Framework for PHP 5.4+ with AdminLTE template",
+    "homepage": "https://github.com/davidkinders/framework-dk",
     "license": "MIT",
     "authors": [
         {
-            "name": "David Carr",
-            "email": "dave@daveismyname.com",
-            "homepage": "http://daveismyname.com",
+            "name": "David Kinders",
+            "email": "david@d-vision.be",
+            "homepage": "https://github.com/davidkinders",
             "role": "Developer"
         }
     ],
