@@ -10,7 +10,6 @@ use Helpers\AdminLTE\Assets;
     <head>
         <meta charset="UTF-8">
         <title><?= $data['title'] . SITETITLE ?></title>
-        
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <meta http-equiv="X-UA-Compatible" content="IE=11">
         <?php

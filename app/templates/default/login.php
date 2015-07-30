@@ -12,7 +12,7 @@ use Helpers\AdminLTE\Assets;
     <title><?=$data['title']?></title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <meta http-equiv="X-UA-Compatible" content="IE=11">
-<?php
+    <?php
     Assets::addToHeader("css", Url::templatePath() . 'bootstrap/css/bootstrap.min.css');
     Assets::addToHeader("css", Url::templatePath() . 'plugins/font-awesome/css/font-awesome.min.css');
     Assets::addToHeader("css", Url::templatePath() . 'dist/css/AdminLTE.min.css');   
