@@ -8,14 +8,17 @@ use Core\Router;
 use Core\Rbac;
 use Helpers\AdminLTE\Assets;
 use Helpers\phpforms\Validator\Validator;
+use Helpers\Database;
 
 class Users extends Controller {
 
     private $MyUsersModel;
-
+    private $db;
+    
     public function __construct() {
         parent::__construct();
         $this->MyUsersModel = new \Modules\Users\Models\Users();
+        $this->db = Database::get();
     }
 
     public function routes() {
@@ -71,7 +74,13 @@ class Users extends Controller {
                     $_SESSION['errors']['edit-user'] = $validator->getAllErrors();
                     Assets::setError("The form has some errors!");
                 } else {
-                    // Good, update the database 
+                    // Good, update the database
+                    $this->db->update('rbac_users', [
+                        "username" => $_POST["username"],
+                        "surname" => $_POST["surname"],
+                        "givenname" => $_POST["givename"],
+                        "email" => $_POST["email"]
+                            ], ["id" => $id]);
                 }
             } // End POST
 
