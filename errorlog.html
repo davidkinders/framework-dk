@@ -1,1 +1,75 @@
-<p>Error on Jul 30, 2015 14:53PM - Invalid argument supplied for foreach() in /home/david/framework-dk/app/templates/default/breadcrumb.php on line 6</p><p>Error on Jul 30, 2015 14:53PM - Illegal string offset 'link' in /home/david/framework-dk/app/templates/default/breadcrumb.php on line 7</p><p>Error on Jul 30, 2015 14:53PM - Illegal string offset 'link' in /home/david/framework-dk/app/templates/default/breadcrumb.php on line 7</p><p>Error on Jul 30, 2015 14:52PM - Invalid argument supplied for foreach() in /home/david/framework-dk/app/templates/default/breadcrumb.php on line 6</p><p>Error on Jul 30, 2015 14:52PM - Invalid argument supplied for foreach() in /home/david/framework-dk/app/templates/default/breadcrumb.php on line 6</p><p>Error on Jul 30, 2015 14:28PM - call_user_func_array() expects parameter 1 to be a valid callback, class 'Modules\Users\Controllers\Users' does not have a method 'edit' in /home/david/framework-dk/app/Core/Router.php on line 95</p><p>Error on Jul 30, 2015 14:15PM - call_user_func_array() expects parameter 1 to be a valid callback, class 'Modules\Users\Controllers\Users' does not have a method 'edit' in /home/david/framework-dk/app/Core/Router.php on line 95</p><p>Error on Jul 30, 2015 14:15PM - call_user_func_array() expects parameter 1 to be a valid callback, class 'Modules\Users\Controllers\Users' does not have a method 'edit' in /home/david/framework-dk/app/Core/Router.php on line 95</p><p>Error on Jul 30, 2015 12:21PM - Missing argument 1 for Helpers\AdminLTE\DataTable::__construct(), called in /home/david/framework-dk/app/Modules/Users/views/index.php on line 8 and defined in /home/david/framework-dk/app/Helpers/AdminLTE/DataTable.php on line 20</p><p>Error on Jul 30, 2015 11:13AM - require(app/views/profile/settings.php): failed to open stream: No such file or directory in /home/david/framework-dk/app/Core/View.php on line 32</p><p>Error on Jul 30, 2015 11:12AM - require(app/views/profile/settings.php): failed to open stream: No such file or directory in /home/david/framework-dk/app/Core/View.php on line 32</p>
+<h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Aug 12, 2015 7:48AM</p>
+
+           <p><strong>Message:</strong> SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1</p>
+
+           <p><strong>Code:</strong> 42000</p>
+
+           <p><strong>File:</strong> /home/david/framework-dk/app/Helpers/Database.php</p>
+
+           <p><strong>Line:</strong> 100</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 /home/david/framework-dk/app/Helpers/Database.php(100): PDOStatement->execute()
+#1 /home/david/framework-dk/app/Modules/Users/views/edit.php(8): Helpers\Database->select('SELECT * FROM r...')
+#2 /home/david/framework-dk/app/Core/View.php(48): require('/home/david/fra...')
+#3 /home/david/framework-dk/app/Modules/Users/Controllers/Users.php(61): Core\View::renderModule('Users/views/edi...', Array)
+#4 [internal function]: Modules\Users\Controllers\Users->edit('1')
+#5 /home/david/framework-dk/app/Core/Router.php(95): call_user_func_array(Array, Array)
+#6 /home/david/framework-dk/app/Core/Router.php(219): Core\Router::invokeObject('Modules\\Users\\C...', Array)
+#7 /home/david/framework-dk/index.php(102): Core\Router::dispatch()
+#8 {main}</pre>
+
+           <hr />
+<h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Aug 12, 2015 7:46AM</p>
+
+           <p><strong>Message:</strong> SQLSTATE[42000]: Syntax error or access violation: 1065 Query was empty</p>
+
+           <p><strong>Code:</strong> 42000</p>
+
+           <p><strong>File:</strong> /home/david/framework-dk/app/Helpers/Database.php</p>
+
+           <p><strong>Line:</strong> 100</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 /home/david/framework-dk/app/Helpers/Database.php(100): PDOStatement->execute()
+#1 /home/david/framework-dk/app/Modules/Users/views/edit.php(8): Helpers\Database->select('')
+#2 /home/david/framework-dk/app/Core/View.php(48): require('/home/david/fra...')
+#3 /home/david/framework-dk/app/Modules/Users/Controllers/Users.php(60): Core\View::renderModule('Users/views/edi...', Array)
+#4 [internal function]: Modules\Users\Controllers\Users->edit('1')
+#5 /home/david/framework-dk/app/Core/Router.php(95): call_user_func_array(Array, Array)
+#6 /home/david/framework-dk/app/Core/Router.php(219): Core\Router::invokeObject('Modules\\Users\\C...', Array)
+#7 /home/david/framework-dk/index.php(102): Core\Router::dispatch()
+#8 {main}</pre>
+
+           <hr />
+<p>Error on Aug 12, 2015 6:59AM - include(app/Helpers/PFBC/Form.php): failed to open stream: No such file or directory in /home/david/framework-dk/app/Modules/Users/views/edit.php on line 6</p><h3>Exception information:</h3>
+
+           <p><strong>Date:</strong> Aug 12, 2015 6:32AM</p>
+
+           <p><strong>Message:</strong> Function 'PFBC\Load' not found (function 'PFBC\Load' not found or invalid function name)</p>
+
+           <p><strong>Code:</strong> 0</p>
+
+           <p><strong>File:</strong> /home/david/framework-dk/app/Helpers/PFBC/Form.php</p>
+
+           <p><strong>Line:</strong> 10</p>
+
+           <h3>Stack trace:</h3>
+
+           <pre>#0 /home/david/framework-dk/app/Helpers/PFBC/Form.php(10): spl_autoload_register('PFBC\\Load')
+#1 /home/david/framework-dk/app/Modules/Users/views/edit.php(6): include('/home/david/fra...')
+#2 /home/david/framework-dk/app/Core/View.php(48): require('/home/david/fra...')
+#3 /home/david/framework-dk/app/Modules/Users/Controllers/Users.php(60): Core\View::renderModule('Users/views/edi...', Array)
+#4 [internal function]: Modules\Users\Controllers\Users->edit('1')
+#5 /home/david/framework-dk/app/Core/Router.php(95): call_user_func_array(Array, Array)
+#6 /home/david/framework-dk/app/Core/Router.php(219): Core\Router::invokeObject('Modules\\Users\\C...', Array)
+#7 /home/david/framework-dk/index.php(102): Core\Router::dispatch()
+#8 {main}</pre>
+
+           <hr />

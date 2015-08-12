@@ -1,0 +1,81 @@
+/* Real Person jQuery plugin styles v2.0.0. */
+.realperson-challenge {
+	display: block;
+	color: #000;
+}
+.realperson-text {
+	font-family: "Courier New",monospace !important;
+	font-size: 5px;
+	font-weight: bold;
+	letter-spacing: -1px;
+	line-height: 3px;
+}
+.realperson-regen {
+	padding-top: 4px;
+	font-size: 12px;
+	cursor: pointer;
+    color: #999;
+}
+.realperson-disabled {
+	opacity: 0.5;
+	filter: Alpha(Opacity=50);
+}
+.realperson-disabled .realperson-regen {
+	cursor: default;
+}
+
+.form-horizontal .realperson-challenge {
+    width: 40%;
+    margin: 14px 0;
+}
+
+.form-horizontal .realperson-challenge {
+    float: left;
+}
+
+.form-horizontal input.is-realperson {
+    float: right;
+    width: 55%;
+    margin-top: 10px;
+}
+@media (min-width: 768px) {
+    .realperson-text {
+        font-size: 6px;
+    }
+    .realperson-regen {
+        text-align: center;
+    }
+}
+
+/* vertical forms */
+
+form:not(.form-horizontal) .realperson-challenge {
+    width: 34%;
+    margin: 10px 0;
+    text-align: center;
+}
+
+@media (min-width: 992px) {
+
+    form:not(.form-horizontal) .realperson-challenge {
+        float: left;
+        width: 34%;
+        margin: 10px 60% 20px 0;
+        text-align: center;
+    }
+
+    form:not(.form-horizontal) .form-control.is-realperson {
+        float: right;
+        width: 60%;
+        margin: 10px 0 20px -60%;
+    }
+    form:not(.form-horizontal) .form-control.is-realperson:after {
+        content: " ";
+        clear: both;
+        width: 100%;
+        display: block;
+        height: 1px;
+        visibility: hidden;
+        margin-bottom: 20px;
+    }
+}

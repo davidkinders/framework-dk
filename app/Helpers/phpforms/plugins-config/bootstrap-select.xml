@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<default>
+		<includes>
+			<!--
+				Path to css and js files into plugins folder.
+				If your files are not in plugins folder, use absolute paths.
+			-->
+			<css>
+				<file>bootstrap-select/dist/css/bootstrap-select.min.css</file>
+			</css>
+			<js>
+				<file>bootstrap-select/dist/js/bootstrap-select.js</file>
+			</js>
+		</includes>
+		<js_code>
+<![CDATA[
+    $("%selector%").selectpicker({container: 'body'});
+]]>
+		</js_code>
+	</default>
+    <default-selectpicker>
+        <includes>
+            <!--
+                Path to css and js files into plugins folder.
+                If your files are not in plugins folder, use absolute paths.
+            -->
+            <css>
+                <file>bootstrap-select/dist/css/bootstrap-select.min.css</file>
+            </css>
+            <js>
+                <file>bootstrap-select/dist/js/bootstrap-select.js</file>
+            </js>
+        </includes>
+        <js_code>
+        </js_code>
+    </default-selectpicker>
+	<countries-flags-16>
+		<includes>
+            <!--
+                Path to css and js files into plugins folder.
+                If your files are not in plugins folder, use absolute paths.
+            -->
+            <css>
+                <file>bootstrap-select/dist/css/bootstrap-select.min.css</file>
+                <file>countries/world-flags-sprite/stylesheets/flags16.css</file>
+            </css>
+            <js>
+                <file>bootstrap-select/dist/js/bootstrap-select.js</file>
+            </js>
+        </includes>
+		<js_code>
+			<!-- your custom code here -->
+		</js_code>
+	</countries-flags-16>
+    <countries-flags-32>
+        <includes>
+            <!--
+                Path to css and js files into plugins folder.
+                If your files are not in plugins folder, use absolute paths.
+            -->
+            <css>
+                <file>bootstrap-select/dist/css/bootstrap-select.min.css</file>
+                <file>countries/world-flags-sprite/stylesheets/flags32.css</file>
+            </css>
+            <js>
+                <file>bootstrap-select/dist/js/bootstrap-select.js</file>
+            </js>
+        </includes>
+        <js_code>
+            <!-- your custom code here -->
+        </js_code>
+    </countries-flags-32>
+</root>

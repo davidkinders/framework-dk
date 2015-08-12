@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+	<default>
+        <!-- password must contain lowercase letters and be 8 characters long -->
+		<includes>
+			<!--
+				Path to css and js files into plugins folder.
+				If your files are not in plugins folder, use absolute paths.
+			-->
+			<css>
+				<file>passfield/dist/css/passfield.min.css</file>
+			</css>
+			<js>
+				<file>passfield/dist/js/passfield.min.js</file>
+			</js>
+		</includes>
+		<js_code>
+<![CDATA[
+    $("%selector%").passField();
+]]>
+		</js_code>
+	</default>
+    <lower-upper-min8>
+        <!-- password must contain lowercase + uppercase letters and be 8 characters long -->
+        <js_code>
+<![CDATA[
+    $("%selector%").passField({
+        pattern: "Abcdefgh"
+    });
+]]>
+        </js_code>
+    </lower-upper-min8>
+    <lower-upper-number-min8>
+        <!-- password must contain lowercase + uppercase letters + numbers and be 8 characters long -->
+        <js_code>
+<![CDATA[
+    $("%selector%").passField({
+        pattern: "1Abcdefg"
+    });
+]]>
+        </js_code>
+    </lower-upper-number-min8>
+    <lower-upper-number-symbol-min8>
+        <!-- password must contain lowercase + uppercase letters + numbers + symbols and be 8 characters long -->
+        <js_code>
+<![CDATA[
+    $("%selector%").passField({
+        pattern: "$1Abcdef"
+    });
+]]>
+        </js_code>
+    </lower-upper-number-symbol-min8>
+    <custom>
+		<!--
+			If you need differents includes for your custom code,
+			copy the default '<includes>' structure and put the needed files into '<file>' nodes.
+			You can add several files nodes if necessary.
+		-->
+		<js_code>
+			<!-- your custom code here -->
+		</js_code>
+	</custom>
+</root>
